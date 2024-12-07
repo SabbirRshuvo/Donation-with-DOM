@@ -40,9 +40,9 @@
         <div
           class="font-semibold cursor-pointer bg-green-400 py-1 px-5 rounded-xl hover:bg-green-600 transition-colors duration-200 ease-in-out"
         >
-          <h2>
-            <a href="blog.html"> Blog</a>
-          </h2>
+          <button onclick="blogBtn()">
+            <h2>Blog</h2>
+          </button>
         </div>
         <div class="flex items-center gap-3">
           <img src="assets/logo.png" alt="" />
@@ -57,7 +57,13 @@
           <h1>What is the Document Object Model (DOM)?</h1>
         </div>
         <div class="collapse-content">
-          <p></p>
+          <p>
+            DOM is a programming interface for web documents. It represents the
+            page so that programs can change the document structure, style, and
+            content. we can change html page also change html attributes and
+            remove existing elements and adding new html elements and create new
+            events using DOM JS.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
@@ -66,7 +72,16 @@
           <h1>How to you select an element from the DOM?</h1>
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            1.using getElementById: to get specific is from html. 2.using
+            getElementsByClassName: to get all class from html. 3.using
+            getElementsByTagName: to get all tag from html. 4. using
+            querySelector: same as getElementById. but querySelctor show
+            Nodelist. 5. using querySelctorAll.. same as getElementsByClassName.
+            its also show NodeList. 6. changing Text Content. 7. changing html
+            content. 8. changing attributes values 9. remove an elements or tag
+            names or attribute valeus.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
@@ -78,7 +93,11 @@
           </h1>
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>
+            Event delegation is a design pattern in JS that attaches a single
+            event listener to a perent element and attach multiple listener to a
+            child element.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
@@ -90,9 +109,15 @@
           </h1>
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>to using setAttribute method</p>
         </div>
       </div>
     </section>
+
+    <script>
+      function blogBtn() {
+        window.location.href = "index.html";
+      }
+    </script>
   </body>
 </html>

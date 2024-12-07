@@ -76,14 +76,15 @@
       </div>
     </section>
     <!-- card start -->
-    <section id="history-btn" class="md:w-10/12 sm:w-full mx-auto">
-      <div
-        class="grid grid-cols-2 gap-4 mt-10 border border-sky-100 p-4 rounded-md"
-      >
-        <div class="col-span-1">
+    <section
+      id="history-btn"
+      class="md:w-10/12 sm:w-full mx-auto grid grid-cols-1"
+    >
+      <div class="flex gap-4 mt-10 border border-sky-100 p-4 rounded-md">
+        <div class="w-full">
           <img src="assets/noakhali.png" alt="" />
         </div>
-        <div class="col-span-1">
+        <div class="w-full">
           <p class="flex gap-2">
             <img src="assets/coin.png" alt="" />
             <span id="balance1" class="text-green-600">$0</span>
@@ -107,6 +108,7 @@
             class="input input-bordered w-full my-2"
           />
           <button
+            onclick="my_modal_1.showModal()"
             id="donateButton1"
             class="bg-green-500 hover:bg-green-600 transition-colors duration-200 ease-in-out rounded-xl w-full py-2"
           >
@@ -115,13 +117,11 @@
         </div>
       </div>
       <!-- row 2 -->
-      <div
-        class="grid grid-cols-2 gap-4 mt-10 border border-sky-100 p-4 rounded-md"
-      >
-        <div class="col-span-1">
+      <div class="flex gap-4 mt-10 border border-sky-100 p-4 rounded-md">
+        <div class="w-full">
           <img src="assets/feni.png" alt="" />
         </div>
-        <div class="col-span-1">
+        <div class="w-full">
           <p class="flex gap-2">
             <img src="assets/coin.png" alt="" />
             <span id="balance2" class="text-green-600">$0</span>
@@ -145,6 +145,7 @@
             class="input input-bordered w-full my-2"
           />
           <button
+            onclick="my_modal_1.showModal()"
             id="donateButton2"
             class="bg-green-500 hover:bg-green-600 transition-colors duration-200 ease-in-out rounded-xl w-full py-2"
           >
@@ -153,13 +154,11 @@
         </div>
       </div>
       <!-- row 3 -->
-      <div
-        class="grid grid-cols-2 gap-4 mt-10 border border-sky-100 p-4 rounded-md"
-      >
-        <div class="col-span-1">
+      <div class="flex gap-4 mt-10 border border-sky-100 p-4 rounded-md">
+        <div class="w-full">
           <img src="assets/quota-protest.png" alt="" />
         </div>
-        <div class="col-span-1">
+        <div class="w-full">
           <p class="flex gap-2">
             <img src="assets/coin.png" alt="" />
             <span id="balance3" class="text-green-600">$0</span>

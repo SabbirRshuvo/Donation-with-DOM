@@ -4,14 +4,6 @@ let balance2 = 0;
 let balance3 = 0;
 const history = [];
 
-const mainBalanceElem = document.getElementById("mainBalance");
-const balance1Elem = document.getElementById("balance1");
-const balance2Elem = document.getElementById("balance2");
-const balance3Elem = document.getElementById("balance3");
-const historyList = document.getElementById("historyList");
-const donationPage = document.getElementById("donationPage");
-const historyPage = document.getElementById("historyPage");
-
 function updateMainBalance() {
   document.getElementById("mainBalance").textContent = `
   $${mainBalance.toFixed(2)}
