@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation with DOM</title>
+    <!-- lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link with daisi ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend">
+    <main class="">
+      <nav
+        class="flex justify-between items-center p-3 md:w-10/12 sm:w-full mx-auto bg-slate-300 rounded-lg"
+      >
+        <div
+          class="font-semibold cursor-pointer bg-green-400 py-1 px-5 rounded-xl text-white hover:bg-green-600 transition-colors duration-200 ease-in-out"
+        >
+          <h2>Blog</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="" />
+          <h3 class="font-semibold">Donate Bangladesh</h3>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="assets/coin.png" alt="" />
+          <p class="font-semibold"><span>5500 </span>BDT.</p>
+        </div>
+      </nav>
+    </main>
+  </body>
+</html>
