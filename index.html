@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +40,9 @@
         <div
           class="font-semibold cursor-pointer bg-green-400 py-1 px-5 rounded-xl hover:bg-green-600 transition-colors duration-200 ease-in-out"
         >
-          <h2>Blog</h2>
+          <button id="navigateButton">
+            <h2>Blog</h2>
+          </button>
         </div>
         <div class="flex items-center gap-3">
           <img src="assets/logo.png" alt="" />
@@ -49,28 +51,32 @@
         <div class="flex gap-2 items-center">
           <img src="assets/coin.png" alt="" />
           <p class="font-semibold">
-            <span id="mainBalance" class="text-red-600">$5500</span>BDT.
+            <span id="mainBalance" class="text-red-600">$55000.00</span>BDT.
           </p>
         </div>
       </nav>
     </main>
     <!-- hero section -->
     <section class="md:w-10/12 sm:w-full mx-auto">
-      <div class="mt-20 text-center">
+      <div class="flex justify-center mb-6 mt-20">
         <button
-          id="assistant-tab"
-          class="py-2 rounded-md focus:outline-none transition-colors duration-200 font-semibold bg-gradient-to-r from-green-300 to-green-400 px-8"
+          onclick="handleDonate()"
+          id="buttonDonationPage"
+          class="px-4 py-2 mr-2 bg-green-500 text-white rounded-lg focus:outline-none"
         >
-          Assistant
+          Donation Page
         </button>
         <button
-          id=" history-tab"
-          class="py-2 rounded-md focus:outline-none transition-colors duration-200 text-gray-600 font-semibold ml-8"
+          onclick="handleHistory()"
+          id="buttonHistoryPage"
+          class="px-4 py-2 bg-gray-300 text-black rounded-lg focus:outline-none"
         >
-          History
+          History Page
         </button>
       </div>
-      <!-- card start -->
+    </section>
+    <!-- card start -->
+    <section id="history-btn" class="md:w-10/12 sm:w-full mx-auto">
       <div
         class="grid grid-cols-2 gap-4 mt-10 border border-sky-100 p-4 rounded-md"
       >
@@ -180,6 +186,7 @@
             class="input input-bordered w-full my-2"
           />
           <button
+            onclick="my_modal_1.showModal()"
             id="donateButton3"
             class="bg-green-500 hover:bg-green-600 transition-colors duration-200 ease-in-out rounded-xl w-full py-2"
           >
@@ -190,6 +197,28 @@
     </section>
 
     <!-- history -->
+    <section>
+      <!-- Open the modal using ID.showModal() method -->
+
+      <!-- modals -->
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box my-5 flex flex-col text-center items-center">
+          <h3 id="modalText" class="text-3xl text-green-600 font-bold">
+            Congrates!
+          </h3>
+          <img class="w-[40px]" src="assets/coin.png" alt="" />
+          <p class="py-4">You Have Donated for Humankind</p>
+          <div class="modal-action flex flex-col items-center text-center my-3">
+            <h2>Successfully</h2>
+            <form method="dialog">
+              <button id="closeModal" class="btn">close confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
     <section>
       <div
         id="history-section"

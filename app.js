@@ -1,9 +1,16 @@
-let mainBalance = 5500;
+let mainBalance = 55000;
 let balance1 = 0;
 let balance2 = 0;
 let balance3 = 0;
+const history = [];
 
-// main balanceDisplay
+const mainBalanceElem = document.getElementById("mainBalance");
+const balance1Elem = document.getElementById("balance1");
+const balance2Elem = document.getElementById("balance2");
+const balance3Elem = document.getElementById("balance3");
+const historyList = document.getElementById("historyList");
+const donationPage = document.getElementById("donationPage");
+const historyPage = document.getElementById("historyPage");
 
 function updateMainBalance() {
   document.getElementById("mainBalance").textContent = `
@@ -11,6 +18,42 @@ function updateMainBalance() {
   `;
 }
 // to handle Donation
+
+function addToHistory(mainBalance, balance1, balance2, balance3) {
+  const historyItem = document.createElement("div");
+  historyItem.className =
+    "bg-white p-3 rounded-md border-1-2 border-indigo-500";
+
+  historyItem.innerHTML = `
+  <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+  
+  <p class="text-lg text-gray-500">Balance: ${mainBalance}</p>
+  <p class="text-xs text-gray-500">Donate:  B1: --${balance1} B2:-- ${balance2} B3:-- ${balance3}</p>
+
+  `;
+
+  const historyContainer = document.getElementById("history-list");
+  historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+}
+//
+
+function handleHistory() {
+  document.getElementById("history-btn").classList.add("hidden");
+  document
+    .getElementById("buttonHistoryPage")
+    .classList.add("bg-green-500", "text-white");
+  document.getElementById("buttonDonationPage").classList.add("bg-gray-400");
+  document.getElementById("history-section").classList.remove("hidden");
+  addToHistory(mainBalance, balance1, balance2, balance3);
+}
+function handleDonate() {
+  document.getElementById("history-btn").classList.remove("hidden");
+  document
+    .getElementById("buttonHistoryPage")
+    .classList.remove("bg-green-500", "text-white");
+  document.getElementById("buttonDonationPage").classList.remove("bg-gray-400");
+  document.getElementById("history-section").classList.add("hidden");
+}
 
 function handleDonation(inputId, balanceId, balanceVar) {
   const donationAmount =
@@ -23,13 +66,15 @@ function handleDonation(inputId, balanceId, balanceVar) {
     document.getElementById(balanceId).textContent = `$${balanceVar.toFixed(
       2
     )}`;
+
     updateMainBalance();
 
     // history
 
     document.getElementById(inputId).value = "";
   } else {
-    return alert("Invalid donation amount");
+    alert("Invalid donation amount");
+    return;
   }
   return balanceVar;
 }
@@ -43,3 +88,16 @@ document.getElementById("donateButton2").addEventListener("click", function () {
 document.getElementById("donateButton3").addEventListener("click", function () {
   balance3 = handleDonation("donation3", "balance3", balance3);
 });
+
+const navigateButton = document.getElementById("navigateButton");
+
+navigateButton.addEventListener("click", function () {
+  window.location.href = "blog.html";
+});
+
+/*
+
+
+
+closer
+*/

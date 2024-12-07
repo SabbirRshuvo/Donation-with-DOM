@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation with DOM</title>
+    <!-- lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link with daisi ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main class="md:w-10/12 sm:w-full mx-auto">
+      <nav
+        class="flex justify-between items-center bg-slate-100 rounded-lg sticky top-0 z-50 shadow-md p-8"
+      >
+        <div
+          class="font-semibold cursor-pointer bg-green-400 py-1 px-5 rounded-xl hover:bg-green-600 transition-colors duration-200 ease-in-out"
+        >
+          <h2>
+            <a href="blog.html"> Blog</a>
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="" />
+          <h3 class="font-semibold">Donate Bangladesh</h3>
+        </div>
+      </nav>
+    </main>
+    <section class="md:w-10/12 sm:w-full mx-auto my-10">
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          <h1>What is the Document Object Model (DOM)?</h1>
+        </div>
+        <div class="collapse-content">
+          <p></p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          <h1>How to you select an element from the DOM?</h1>
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          <h1>
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </h1>
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          <h1>
+            How to you manipulate an element's attributes and styles using the
+            DOM
+          </h1>
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
