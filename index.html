@@ -27,6 +27,9 @@
             fontFamily: {
               lexend: ["Lexend", "sans-serif"],
             },
+            screens: {
+              xs: "300px",
+            },
           },
         },
       };
@@ -35,7 +38,7 @@
   <body class="font-lexend">
     <main class="md:w-10/12 sm:w-full mx-auto">
       <nav
-        class="flex justify-between items-center bg-slate-100 rounded-lg sticky top-0 z-50 shadow-md p-8"
+        class="sm:flex md:flex max-w-xs:block sm:text-[16px] justify-between items-center bg-slate-100 rounded-lg sticky top-0 z-50 shadow-md p-8"
       >
         <div
           class="font-semibold cursor-pointer bg-green-400 py-1 px-5 rounded-xl hover:bg-green-600 transition-colors duration-200 ease-in-out"
@@ -58,7 +61,7 @@
     </main>
     <!-- hero section -->
     <section class="md:w-10/12 sm:w-full mx-auto">
-      <div class="flex justify-center mb-6 mt-20">
+      <div class="flex justify-center mb-6 mt-10">
         <button
           onclick="handleDonate()"
           id="buttonDonationPage"
@@ -78,15 +81,17 @@
     <!-- card start -->
     <section
       id="history-btn"
-      class="md:w-10/12 sm:w-full mx-auto grid grid-cols-1"
+      class="w-10/12 mx-auto grid sm:grid-cols-1 gap-y-10"
     >
-      <div class="flex gap-4 mt-10 border border-sky-100 p-4 rounded-md">
-        <div class="w-full">
-          <img src="assets/noakhali.png" alt="" />
-        </div>
-        <div class="w-full">
-          <p class="flex gap-2">
-            <img src="assets/coin.png" alt="" />
+      <div
+        class="card lg:card-side bg-base-100 shadow-xl col-span-2 border-[1px] border-slate-100"
+      >
+        <figure class="col-span-1 w-full">
+          <img src="assets/noakhali.png" />
+        </figure>
+        <div class="card-body col-span-1 w-full">
+          <p class="flex gap-2 items-center">
+            <img class="max-w-20" src="assets/coin.png" alt="" />
             <span id="balance1" class="text-green-600">$0</span>
             BDT
           </p>
@@ -116,13 +121,17 @@
           </button>
         </div>
       </div>
-      <!-- row 2 -->
-      <div class="flex gap-4 mt-10 border border-sky-100 p-4 rounded-md">
-        <div class="w-full">
+
+      <!-- card 2 -->
+
+      <div
+        class="card lg:card-side bg-base-100 shadow-xl col-span-2 border-[1px] border-slate-100"
+      >
+        <figure class="col-span-1 w-full">
           <img src="assets/feni.png" alt="" />
-        </div>
-        <div class="w-full">
-          <p class="flex gap-2">
+        </figure>
+        <div class="card-body col-span-1 w-full">
+          <p class="flex gap-2 items-center">
             <img src="assets/coin.png" alt="" />
             <span id="balance2" class="text-green-600">$0</span>
             BDT
@@ -153,13 +162,17 @@
           </button>
         </div>
       </div>
-      <!-- row 3 -->
-      <div class="flex gap-4 mt-10 border border-sky-100 p-4 rounded-md">
-        <div class="w-full">
+
+      <!-- card 2 is end here -->
+
+      <div
+        class="card lg:card-side bg-base-100 shadow-xl col-span-2 border-[1px] border-slate-100"
+      >
+        <figure class="col-span-1 w-full">
           <img src="assets/quota-protest.png" alt="" />
-        </div>
-        <div class="w-full">
-          <p class="flex gap-2">
+        </figure>
+        <div class="card-body col-span-1 w-full">
+          <p class="flex gap-2 items-center">
             <img src="assets/coin.png" alt="" />
             <span id="balance3" class="text-green-600">$0</span>
             BDT
@@ -193,6 +206,7 @@
           </button>
         </div>
       </div>
+      <!-- card 3 is here -->
     </section>
 
     <!-- history -->
