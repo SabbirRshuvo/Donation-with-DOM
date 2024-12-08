@@ -47,7 +47,7 @@ function handleDonation(inputId, balanceId, balanceVar, location) {
     const historyItem = document.createElement("div");
     historyItem.className = "bg-white rounded-md border-1-2 border-indigo-500";
     historyItem.innerHTML = `
-        <h3>${donationAmount} Taka is Donated for Donate for ${location}</h3>
+        <h3>${donationAmount} Taka  ${location}</h3>
         <p class="text-sm">
         ${new Date().toLocaleString()}(BD Standard Time)
         </p>
