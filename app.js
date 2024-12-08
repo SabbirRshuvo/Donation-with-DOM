@@ -21,7 +21,6 @@ function handleHistory() {
     .classList.add("bg-green-500", "text-white");
   document.getElementById("buttonDonationPage").classList.add("bg-gray-400");
   document.getElementById("history-section").classList.remove("hidden");
-  // addToHistory(mainBalance, balance1, balance2, balance3);
 }
 function handleDonate() {
   document.getElementById("history-btn").classList.remove("hidden");
@@ -84,10 +83,3 @@ const navigateButton = document.getElementById("navigateButton");
 navigateButton.addEventListener("click", function () {
   window.location.href = "blog.html";
 });
-
-/*
-
-
-
-closer
-*/
