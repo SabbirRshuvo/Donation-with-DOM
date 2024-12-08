@@ -58,16 +58,15 @@ function handleDonation(inputId, balanceId, balanceVar) {
     document.getElementById(balanceId).textContent = `$${balanceVar.toFixed(
       2
     )}`;
-
     updateMainBalance();
-
+    my_modal_1.showModal();
     // history
 
     document.getElementById(inputId).value = "";
   } else {
     alert("Invalid donation amount");
-    return;
   }
+
   return balanceVar;
 }
 
